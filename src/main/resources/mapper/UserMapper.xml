@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.name.demo.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="cn.name.demo.domain.User">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="VARCHAR"/>
+
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, name, age
+  </sql>
+    <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.name.demo.domain.UserExample">
+select      *  from  ceshi
+    </select>
+
+
+</mapper>
